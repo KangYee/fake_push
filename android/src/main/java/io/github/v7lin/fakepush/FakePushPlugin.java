@@ -150,6 +150,7 @@ public class FakePushPlugin implements MethodCallHandler, PluginRegistry.NewInte
             XGPushConfig.setMiPushAppKey(registrar.context(), appInfo.metaData.getString(XinGeConstants.META_KEY_XIAOMI_APPKEY));
             XGPushConfig.setMzPushAppId(registrar.context(), appInfo.metaData.getString(XinGeConstants.META_KEY_MEIZU_APPID));
             XGPushConfig.setMzPushAppKey(registrar.context(), appInfo.metaData.getString(XinGeConstants.META_KEY_MEIZU_APPKEY));
+
             XGPushConfig.enableOtherPush(registrar.context(), true);
         } catch (PackageManager.NameNotFoundException ignore) {
         }
