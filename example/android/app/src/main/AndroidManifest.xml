@@ -12,7 +12,7 @@
         android:label="fake_push_example"
         android:icon="@mipmap/ic_launcher"
         tools:replace="android:label">
-        <activity
+        <activityonCommandResult
             android:name=".MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
@@ -30,6 +30,6 @@
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
+        </activityonCommandResult>
     </application>
 </manifest>
