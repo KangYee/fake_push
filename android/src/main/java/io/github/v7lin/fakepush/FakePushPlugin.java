@@ -146,11 +146,11 @@ public class FakePushPlugin implements MethodCallHandler, PluginRegistry.NewInte
         try {
             ApplicationInfo appInfo = registrar.context().getPackageManager().getApplicationInfo(registrar.context().getPackageName(), PackageManager.GET_META_DATA);
             XGPushConfig.setHuaweiDebug(enableDebug);
+            XGPushConfig.getToken(registrar.context());
             XGPushConfig.setMiPushAppId(registrar.context(), appInfo.metaData.getString(XinGeConstants.META_KEY_XIAOMI_APPID));
             XGPushConfig.setMiPushAppKey(registrar.context(), appInfo.metaData.getString(XinGeConstants.META_KEY_XIAOMI_APPKEY));
             XGPushConfig.setMzPushAppId(registrar.context(), appInfo.metaData.getString(XinGeConstants.META_KEY_MEIZU_APPID));
             XGPushConfig.setMzPushAppKey(registrar.context(), appInfo.metaData.getString(XinGeConstants.META_KEY_MEIZU_APPKEY));
-
             XGPushConfig.enableOtherPush(registrar.context(), true);
         } catch (PackageManager.NameNotFoundException ignore) {
         }
